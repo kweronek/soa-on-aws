@@ -1,9 +1,10 @@
 #
-git init
-git clone https://github.com/rancher/k3c
+mkdir k3c
 cd k3c
+git clone https://github.com/rancher/k3c
 make build
 ./bin/k3c daemon --group=$(id -g) &
+cd ..
 
 
 #docker pull rancher/k3s
